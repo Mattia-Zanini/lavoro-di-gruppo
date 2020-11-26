@@ -1,0 +1,48 @@
+<html>
+
+	<head>
+
+		<title>
+
+			Convertitore da Deciamle a Ottale
+			
+		</title>
+
+	</head>
+
+	<body>
+
+		<script>
+
+			function dec_ott(num){
+				n = document.getElementById("decimale").value; 
+				ottale = "";
+			
+				while(n!=0) {
+					resto = n%8; 
+					n = (n-resto)/8;
+					ottale = resto + ottale;
+				}
+				
+				return ottale;
+			}
+
+			function change(name)
+			{
+					n = document.getElementById("decimale").value;
+					result2 = dec_ott(n);
+					risultato2.value=result2;
+			}
+
+			</script>
+
+			<p><label>Numero in decimale</label>
+
+				<input type="text" id="decimale" onkeyup="change(this)"></p>
+				<p>Numero in ottale: <input type="text" id="risultato2" readonly></p>
+			
+		<td><a href="Lavoro di gruppo.html">Torna alla home page</a></td>
+
+	</body>
+
+</html>
