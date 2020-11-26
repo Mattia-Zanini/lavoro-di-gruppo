@@ -1,0 +1,46 @@
+<html>
+
+	<head>
+		<title>
+
+			Convertitore da Deciamle a Binario
+			
+		</title>
+
+	</head>
+
+	<body>
+
+		<script> 
+
+			function dec_bin(num){
+				n = document.getElementById("decimale").value; 
+				binario = "";
+			
+				while(n!=0) {
+					resto = n%2; 
+					n = (n-resto)/2; 
+					binario = resto + binario;
+				}
+				
+				return binario;
+			}
+
+			function change(name)
+			{
+					n = document.getElementById("decimale").value;
+					result = dec_bin(n);
+					risultato.value=result;
+			}
+
+			</script>
+
+			<p><label>Numero in decimale</label>
+				<input type="text" id="decimale" onkeyup="change(this)"></p>
+				<p>Numero in binario: <input type="text" id="risultato" readonly></p>
+			
+		<td><a href="Lavoro di gruppo.html">Torna alla home page</a></td>
+
+	</body>
+
+</html>
