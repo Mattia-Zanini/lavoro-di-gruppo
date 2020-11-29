@@ -1,0 +1,51 @@
+<html><head>
+<form name="equa" action="">
+<fieldset>
+<legend>
+Risoluzione di un'equazione di primo grado del tipo <i>ax</i> + <i>b</i> = 0
+</legend><br>
+<label>Coefficiente a = </label>
+<input type="text" class="input1" name="a1"   value="" onClick="document.getElementById('ris').innerHTML =''"><br />
+<label>Termine noto b = </label>
+<input type="text" class="input1" name="b1"  value="" onClick="document.getElementById('ris').innerHTML =''"><br />
+<p> 
+<span id="ris"></span>
+</fieldset></p>
+<p> <input type="button" class="input2" value="Risolvi" onclick="esegui()"><input type="reset" class="input2" value="Aggiorna" name="no">
+</p>
+
+</form>
+<script type="text/javascript">
+var forma=''
+function calcola() {
+ forma =a + 'x';
+  if (b>=0){forma+='+'}
+   forma+=b
+   forma+=' = 0'
+   if (a==0) {
+     if (b==0) {
+            document.getElementById('ris').innerHTML = forma + ' è un\'equazione indeterminata'
+      } else {
+              document.getElementById('ris').innerHTML = forma + ' è un\'equazione impossibile'
+    }
+  }  
+  else {
+      x=-b/a;
+      document.getElementById('ris').innerHTML = forma + ' è un\'equazione determinata.<br> La soluzione è ' + x;
+      }
+}
+function esegui() {
+ a=Number(document.equa.a1.value);
+ b=Number(document.equa.b1.value);
+ if (a==0){document.equa.a1.value = 0}
+ if (b==0){document.equa.b1.value = 0}
+ if (isNaN(a) || isNaN(b)) {
+            document.getElementById('ris').innerHTML = 'Non hai immesso valori validi'
+ } else {               
+  calcola();
+ }
+}
+ </script>
+
+
+</body></html>
