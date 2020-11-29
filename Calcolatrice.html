@@ -291,85 +291,94 @@ function helpFile()
 </script>
 
 </head>
-<body onload="reset();">
-<br><br>
-<div align="center">
+                                                     <body onload="reset();">
+                                                         <br><br>
+                                                         <div align="center">
 
 
-<form name="f">
-<table bgcolor="#000000" width="400" border="5" cellspacing="2" cellpadding="2"><tbody><tr>
-<td bgcolor="#C0C0C0" colspan="7" align="RIGHT">
-<input name="display" type="TEXT" value="0" size="25">
-<input name="stack" type="HIDDEN" value="955"></td></tr>
- <tr>
-  <td bgcolor="#FF0000"><input type="BUTTON" value=" Help " onclick="helpFile();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value=" Num " onclick="random()+addChar(display,mikesnum)+addChar(stack,mikesnum);"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value=" <00> " onclick="onlyTwo();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value=" <-> " onclick="round();"></td>
-  <td bgcolor="#800080"><input type="BUTTON" value=" M2+ " onclick="mem(2);"></td>
-  <td bgcolor="#800080"><input type="BUTTON" value="M2R " onclick="mem(-2);"></td>
-  <td bgcolor="#800080"><input type="BUTTON" value=" M2C" onclick="mem(3);"></td>
- </tr>
- <tr>
-  <td bgcolor="#FF0000"><input type="BUTTON" value=" Clear" onclick="newSlate();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="   x ³  " onclick="addChar(display.value)+cube();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="   x ²  " onclick="addChar(display.value)+square();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value="  %  " onclick="perCent();"></td>
-  <td bgcolor="#800080"><input type="BUTTON" value="  M+  " onclick="mem(1);"></td>
-  <td bgcolor="#800080"><input type="BUTTON" value=" MR  " onclick="mem(-1);"></td>
-  <td bgcolor="#800080"><input type="BUTTON" value=" MC  " onclick="mem(0);"></td>
- </tr>
- <tr>
-  <td bgcolor="#000080"><input type="BUTTON" value="    E     " onclick="wipe()+addChar(display,Math.E)+addChar(stack,Math.E);"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="  Exp  " onclick="addChar(display.value)+exp();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value=" Sqrt  " onclick="addChar(stack)+sqrt();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value=" ÷  " onclick="addChar(stack,'/')+wipe()+addChar(display,'/');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    7    " onclick="addChar(display,'7')+addChar(stack,'7');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    8    " onclick="addChar(display,'8')+addChar(stack,'8');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    9    " onclick="addChar(display,'9')+addChar(stack,'9');"></td>
- </tr>
- <tr>
-  <td bgcolor="#000080"><input type="BUTTON" value="Sqrt½" onclick="wipe()+addChar(display,Math.SQRT1_2)+addChar(stack,Math.SQRT1_2);"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="  Log " onclick="addChar(display.value)+log();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="  Abs " onclick="addChar(display.value)+abs();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value="  × " onclick="addChar(stack,'*')+wipe()+addChar(display,'*');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    4    " onclick="addChar(display,'4')+addChar(stack,'4');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    5    " onclick="addChar(display,'5')+addChar(stack,'5');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    6    " onclick="addChar(display,'6')+addChar(stack,'6');"></td>
- </tr>
- <tr>
-  <td bgcolor="#000080"><input type="BUTTON" value="  Ln2   " onclick="wipe()+addChar(display,Math.LN2)+addChar(stack,Math.LN2);"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="ATan" onclick="addChar(display.value)+atan();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="  Tan " onclick="addChar(display.value)+tan();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value="    -   " onclick="addChar(stack,'-')+wipe()+addChar(display,'-');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    1    " onclick="addChar(display,'1')+addChar(stack,'1');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    2    " onclick="addChar(display,'2')+addChar(stack,'2');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    3    " onclick="addChar(display,'3')+addChar(stack,'3');"></td>
- </tr>
- <tr>
-  <td bgcolor="#000080"><input type="BUTTON" value=" Ln10 " onclick="wipe()+addChar(display,Math.LN10)+addChar(stack,Math.LN10);"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="ACos" onclick="addChar(display.value)+acos();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="  Cos " onclick="addChar(display.value)+cos();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value="   +   " onclick="addChar(stack,'+')+wipe()+addChar(display,'+');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="  ±  " onclick="changeSign(display)+changeSign(stack);"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="     .    " onclick="addChar(display,'.')+addChar(stack,'.');"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    0    " onclick="addChar(display,'0')+addChar(stack,'0');"></td>
- </tr>
- <tr>
-  <td bgcolor="#000080"><input type="BUTTON" value="    Pi    " onclick="wipe()+addChar(display,Math.PI)+addChar(stack,Math.PI);"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value=" ASin " onclick="addChar(display.value)+asin();"></td>
-  <td bgcolor="#0000FF"><input type="BUTTON" value="  Sin  " onclick="addChar(display.value)+sin()+swipe();"></td>
-  <td bgcolor="#008000"><input type="BUTTON" value="   <-  " onclick="deleteChar(display)+deleteChar(stack);"></td>
-  <td bgcolor="#FFA500" colspan="2"><input type="BUTTON" value="          =          " onclick="testFirst()+swipe();"></td>
-  <td bgcolor="#FFA500"><input type="BUTTON" value="    C   " onclick="reset();"></td>
- </tr></tbody></table></form>
+                                                             <form name="f">
+                                                                 <table bgcolor="#000000" width="400" border="5" cellspacing="2" cellpadding="2">
+                                                                     <tbody>
+                                                                         <tr>
+                                                                             <td bgcolor="#C0C0C0" colspan="7" align="RIGHT">
+                                                                                 <input name="display" type="TEXT" value="0" size="25">
+                                                                                 <input name="stack" type="HIDDEN" value="955">
+                                                                             </td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#FF0000"><input type="BUTTON" value=" Help " onclick="helpFile();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value=" Num " onclick="random()+addChar(display,mikesnum)+addChar(stack,mikesnum);"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value=" <00> " onclick="onlyTwo();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value=" <-> " onclick="round();"></td>
+                                                                             <td bgcolor="#800080"><input type="BUTTON" value=" M2+ " onclick="mem(2);"></td>
+                                                                             <td bgcolor="#800080"><input type="BUTTON" value="M2R " onclick="mem(-2);"></td>
+                                                                             <td bgcolor="#800080"><input type="BUTTON" value=" M2C" onclick="mem(3);"></td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#FF0000"><input type="BUTTON" value=" Clear" onclick="newSlate();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="   x ³  " onclick="addChar(display.value)+cube();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="   x ²  " onclick="addChar(display.value)+square();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value="  %  " onclick="perCent();"></td>
+                                                                             <td bgcolor="#800080"><input type="BUTTON" value="  M+  " onclick="mem(1);"></td>
+                                                                             <td bgcolor="#800080"><input type="BUTTON" value=" MR  " onclick="mem(-1);"></td>
+                                                                             <td bgcolor="#800080"><input type="BUTTON" value=" MC  " onclick="mem(0);"></td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#000080"><input type="BUTTON" value="    E     " onclick="wipe()+addChar(display,Math.E)+addChar(stack,Math.E);"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="  Exp  " onclick="addChar(display.value)+exp();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value=" Sqrt  " onclick="addChar(stack)+sqrt();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value=" ÷  " onclick="addChar(stack,'/')+wipe()+addChar(display,'/');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    7    " onclick="addChar(display,'7')+addChar(stack,'7');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    8    " onclick="addChar(display,'8')+addChar(stack,'8');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    9    " onclick="addChar(display,'9')+addChar(stack,'9');"></td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#000080"><input type="BUTTON" value="Sqrt½" onclick="wipe()+addChar(display,Math.SQRT1_2)+addChar(stack,Math.SQRT1_2);"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="  Log " onclick="addChar(display.value)+log();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="  Abs " onclick="addChar(display.value)+abs();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value="  × " onclick="addChar(stack,'*')+wipe()+addChar(display,'*');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    4    " onclick="addChar(display,'4')+addChar(stack,'4');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    5    " onclick="addChar(display,'5')+addChar(stack,'5');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    6    " onclick="addChar(display,'6')+addChar(stack,'6');"></td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#000080"><input type="BUTTON" value="  Ln2   " onclick="wipe()+addChar(display,Math.LN2)+addChar(stack,Math.LN2);"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="ATan" onclick="addChar(display.value)+atan();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="  Tan " onclick="addChar(display.value)+tan();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value="    -   " onclick="addChar(stack,'-')+wipe()+addChar(display,'-');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    1    " onclick="addChar(display,'1')+addChar(stack,'1');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    2    " onclick="addChar(display,'2')+addChar(stack,'2');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    3    " onclick="addChar(display,'3')+addChar(stack,'3');"></td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#000080"><input type="BUTTON" value=" Ln10 " onclick="wipe()+addChar(display,Math.LN10)+addChar(stack,Math.LN10);"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="ACos" onclick="addChar(display.value)+acos();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="  Cos " onclick="addChar(display.value)+cos();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value="   +   " onclick="addChar(stack,'+')+wipe()+addChar(display,'+');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="  ±  " onclick="changeSign(display)+changeSign(stack);"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="     .    " onclick="addChar(display,'.')+addChar(stack,'.');"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    0    " onclick="addChar(display,'0')+addChar(stack,'0');"></td>
+                                                                         </tr>
+                                                                         <tr>
+                                                                             <td bgcolor="#000080"><input type="BUTTON" value="    Pi    " onclick="wipe()+addChar(display,Math.PI)+addChar(stack,Math.PI);"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value=" ASin " onclick="addChar(display.value)+asin();"></td>
+                                                                             <td bgcolor="#0000FF"><input type="BUTTON" value="  Sin  " onclick="addChar(display.value)+sin()+swipe();"></td>
+                                                                             <td bgcolor="#008000"><input type="BUTTON" value="   <-  " onclick="deleteChar(display)+deleteChar(stack);"></td>
+                                                                             <td bgcolor="#FFA500" colspan="2"><input type="BUTTON" value="          =          " onclick="testFirst()+swipe();"></td>
+                                                                             <td bgcolor="#FFA500"><input type="BUTTON" value="    C   " onclick="reset();"></td>
+                                                                         </tr>
+                                                                     </tbody>
+                                                                 </table>
+                                                             </form>
 
 
-</div>
-<br><br><br><br><br><br>
-	<div align="center">
-&nbsp;</div>
-	
+                                                         </div>
+                                                         <br><br><br><br><br><br>
+                                                         <div align="center">
+                                                             &nbsp;
+                                                         </div>
+                                                         <td><a href="Lavoro di gruppo.html">Torna alla home page</a></td>
 
 
-</body></html>
+
+                                                     </body></html>
