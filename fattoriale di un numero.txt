@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>ESEMPIO: fattoriale</TITLE>
+</HEAD>
+<BODY>
+<SCRIPT>
+<!-- Inizio script JavaScript
+var fattoriale;
+var N;
+N = window.prompt("Inserisci il numero");
+N = N * 1;
+if (N >= 0)
+{
+fattoriale = 1;
+while (N > 0)
+{
+fattoriale = fattoriale * N;
+N = N - 1;
+}
+window.alert("Risultato = " + fattoriale);
+}
+else
+{
+window.alert("Numero negativo!");
+}
+// Fine script -->
+</SCRIPT>
+</BODY>
+</HTML>
